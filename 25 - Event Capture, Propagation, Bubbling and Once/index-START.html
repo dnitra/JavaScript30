@@ -12,7 +12,23 @@
       </div>
     </div>
   </div>
+<script>
+  const divs = document.querySelectorAll("div")
 
+  function logText(e) {
+    
+    console.log(this.classList.value)
+    //`e.stopPropagation()
+    
+    
+  }
+
+  divs.forEach(key=> key.addEventListener("click",logText,{
+    capture:false,
+    once:true}))
+
+
+</script>
 <style>
   html {
     box-sizing: border-box;
